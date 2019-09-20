@@ -1,0 +1,3 @@
+﻿  Jogo.cpp
+e:\git\trabalhoga_ed2019\projetos\exemplos_vs2015\exemplos\sprite\jogo.cpp(36): warning C4305: 'argumento': truncamento de 'double' para 'float'
+  Sprite.vcxproj -> E:\GIT\TrabalhoGA_ED2019\projetos\exemplos_VS2015\bin\Exemplo - Sprite-debug.exe

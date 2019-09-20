@@ -1,0 +1,7 @@
+﻿  Jogo.cpp
+e:\git\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(15): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(79): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(81): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(83): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(89): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+  base.vcxproj -> E:\GIT\TrabalhoGA_ED2019\projetos\JogoGA_Mauricio\bin\base-debug.exe

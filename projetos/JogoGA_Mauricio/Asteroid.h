@@ -16,9 +16,9 @@ public:
 	Sprite getSprite();
 	float getPosX();
 	float getPosY();
-	float getRot();
 
 	void update();
+	void asteroidStart();
 	void draw();
 
 private:

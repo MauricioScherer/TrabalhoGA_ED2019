@@ -26,8 +26,11 @@ void Jogo::inicializar()
 
 #pragma region Asteroid
 
-	gRecursos.carregarSpriteSheet("asteroid", "assets/sprite/asteroid.png", 1, 1);	
-	asteroidStart();
+	gRecursos.carregarSpriteSheet("asteroid", "assets/sprite/asteroid.png", 1, 1);
+	asteroid[0].setSpriteSheet("asteroid");
+	asteroid[1].setSpriteSheet("asteroid");
+	asteroid[0].asteroidStart();
+	asteroid[1].asteroidStart();
 
 #pragma endregion
 
@@ -36,6 +39,7 @@ void Jogo::inicializar()
 void Jogo::finalizar()
 {
 	gRecursos.descarregarSpriteSheet("player");
+	gRecursos.descarregarSpriteSheet("asteroid");
 
 	uniFinalizar();
 }
@@ -46,48 +50,25 @@ void Jogo::executar()
 	{
 		uniIniciarFrame();
 		
-		if (gTeclado.segurando[TECLA_DIR] && player.getPosX() < gJanela.getLargura() - 20)
-			player.moveRight();
-		else if (gTeclado.segurando[TECLA_ESQ] && player.getPosX() > 20)
-			player.moveLeft();
-
-		if (gTeclado.segurando[TECLA_CIMA] && player.getPosY() > 40)
-			player.moveUp();
-		else if (gTeclado.segurando[TECLA_BAIXO] && player.getPosY() < gJanela.getAltura() - 40)
-			player.moveDown();
-		
-		asteroid.update();
-
-		if (asteroid.getPosY() > gJanela.getAltura() + 20)
-			asteroidStart();
-
-		collisionTest();
-		asteroid.draw();
+		player.move();
 		player.draw();
+		
+		for (int i = 0; i < 2; i++)
+		{
+			asteroid[i].update();
+			asteroid[i].draw();
+			collisionTest(i);
+		}
 
 		uniTerminarFrame();
 	}
 }
 
-void Jogo::asteroidStart()
+void Jogo::collisionTest(int p_obj)
 {
-	int x, y;
-	x = uniRandEntre(30, gJanela.getLargura() - 30);
-	y = -30;
-		
-	asteroid.setSpriteSheet("asteroid");
-	asteroid.setPosition(x, y);
-
-	asteroid.setSpeed(uniRandEntre(1, 3));
-	int scaleTemp = uniRandEntre(2, 6);
-	asteroid.setScale(scaleTemp, scaleTemp);
-}
-
-void Jogo::collisionTest()
-{
-	if (uniTestarColisao(asteroid.getSprite(), asteroid.getPosX(), asteroid.getPosY(), asteroid.getRot(),
+	if (uniTestarColisao(asteroid[p_obj].getSprite(), asteroid[p_obj].getPosX(), asteroid[p_obj].getPosY(), 0,
 		player.getSprite(), player.getPosX(), player.getPosY(), player.getRot()))
 	{
-		asteroidStart();
+		asteroid[p_obj].asteroidStart();
 	}
 }

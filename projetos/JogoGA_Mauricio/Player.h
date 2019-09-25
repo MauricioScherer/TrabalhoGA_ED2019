@@ -1,7 +1,8 @@
 #pragma once
 #include "libUnicornio.h"
+#include "Tiro.h"
 
-class Player
+class Player : public Tiro
 {
 public:
 	Player();
@@ -11,11 +12,7 @@ public:
 	void setSpeed(float p_speed);
 	void setSpriteSheet(string p_spriteSheet);
 
-	void moveRight();
-	void moveLeft();
-	void moveUp();
-	void moveDown();
-
+	void move();
 	void draw();
 
 	Sprite getSprite();

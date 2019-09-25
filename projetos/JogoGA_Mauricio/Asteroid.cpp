@@ -53,14 +53,25 @@ float Asteroid::getPosY()
 	return y;
 }
 
-float Asteroid::getRot()
-{
-	return 0;
-}
-
 void Asteroid::update()
 {
 	y += speed;
+
+	if (y > gJanela.getAltura() + 20)
+		asteroidStart();
+}
+
+void Asteroid::asteroidStart()
+{
+	int x, y;
+	x = uniRandEntre(30, gJanela.getLargura() - 30);
+	y = -50;
+
+	setPosition(x, y);
+
+	setSpeed(uniRandEntre(1, 3));
+	int scaleTemp = uniRandEntre(2, 6);
+	setScale(scaleTemp, scaleTemp);
 }
 
 void Asteroid::draw()

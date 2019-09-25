@@ -26,24 +26,17 @@ void Player::setSpriteSheet(string p_spriteSheet)
 	sprite.setSpriteSheet(p_spriteSheet);
 }
 
-void Player::moveRight()
+void Player::move()
 {
-	x += speed;
-}
+	if (gTeclado.segurando[TECLA_DIR] && x < gJanela.getLargura() - 20)
+		x += speed;
+	else if (gTeclado.segurando[TECLA_ESQ] && x > 20)
+		x -= speed;
 
-void Player::moveLeft()
-{
-	x -= speed;
-}
-
-void Player::moveUp()
-{
-	y -= speed;
-}
-
-void Player::moveDown()
-{
-	y += speed;
+	if (gTeclado.segurando[TECLA_CIMA] && y > 40)
+		y -= speed;
+	else if (gTeclado.segurando[TECLA_BAIXO] && y < gJanela.getAltura() - 40)
+		y += speed;
 }
 
 void Player::draw()

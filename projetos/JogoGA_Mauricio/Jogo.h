@@ -13,10 +13,8 @@ public:
 	void executar();
 
 private:
-	void asteroidStart();
-	void collisionTest();
-
+	void collisionTest(int p_obj);
 	Player player;
-	Asteroid asteroid;
+	Asteroid asteroid[2];
 };
 

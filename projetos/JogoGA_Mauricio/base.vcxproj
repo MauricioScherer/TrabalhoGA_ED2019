@@ -14,7 +14,7 @@
     <ProjectGuid>{67AC409B-9BDA-4D9D-86C1-D2B9885557CF}</ProjectGuid>
     <RootNamespace>base</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -100,6 +100,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Asteroid.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="ItemBase.cpp" />
     <ClCompile Include="Jogo.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -107,6 +109,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Asteroid.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="ItemBase.h" />
     <ClInclude Include="Jogo.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Tiro.h" />

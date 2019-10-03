@@ -4,6 +4,9 @@
 
 Tiro::Tiro()
 {
+	speedIntro = 4.0f;
+	isPowerUp = false;
+	counterPowerUp = 0;
 }
 
 
@@ -11,48 +14,63 @@ Tiro::~Tiro()
 {
 }
 
-void Tiro::tiroSetPosition(int p_x, int p_y)
+void Tiro::setPosition(int p_x, int p_y)
 {
 	x = p_x;
 	y = p_y;
 }
 
-void Tiro::tiroSetSpeed(float p_speed)
+void Tiro::setSpeed(float p_speed)
 {
 	speed = p_speed;
 }
 
-float Tiro::tiroGetSpeed()
+float Tiro::getSpeed()
 {
 	return speed;
 }
 
-void Tiro::tiroSetSpriteSheet(string p_spriteSheet)
+float Tiro::getSpeedIntro()
+{
+	return speedIntro;
+}
+
+void Tiro::setSpriteSheet(string p_spriteSheet)
 {
 	sprite.setSpriteSheet(p_spriteSheet);
 }
 
-void Tiro::tiroMoveShot()
+void Tiro::moveShot()
 {
 	y -= speed;
 }
 
-void Tiro::tiroDraw()
+void Tiro::draw()
 {
 	sprite.desenhar(x, y);
 }
 
-Sprite Tiro::tiroGetSprite()
+Sprite Tiro::getSprite()
 {
 	return sprite;
 }
 
-int Tiro::tiroGetPosX()
+int Tiro::getPosX()
 {
 	return x;
 }
 
-int Tiro::tiroGetPosY()
+int Tiro::getPosY()
 {
 	return y;
+}
+
+void Tiro::setIsPowerUp(bool p_status)
+{
+	isPowerUp = p_status;
+}
+
+int Tiro::getPowerUpTime()
+{
+	return counterPowerUp;
 }

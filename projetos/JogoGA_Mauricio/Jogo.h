@@ -16,24 +16,29 @@ public:
 private:
 	int counterItem;
 	int maxCounter;
-	bool isItemActive = false;
 	int points;
 	int statusGame;
-	void collisionTest(int p_obj);
-
-	Player player;
-	Asteroid asteroid[2];
-	Item *item;
-
-	Sprite sprTitle;
-	BotaoSprite buttonStart;
-	BotaoSprite buttonGameOver;
+	bool isItemActive = false;
+	bool debug = false;
 
 	void startNewItem();
 	void resetItem();
 	void setColorBackground();
-	void GameStart();
+	void GameStart(int p_status);
+	void collisionTest(int p_obj);
 	void save();
 	int load();
+	
+	Player player;
+	Asteroid asteroid[4];
+	Item *item;
+
+	Som music, damage, damageShip, powerUp, buttonEffect;
+	Sprite sprTitle;
+	Sprite background;
+	BotaoSprite buttonStart;
+	BotaoSprite buttonContinuar;
+	BotaoSprite buttonGameOver;
+
 };
 

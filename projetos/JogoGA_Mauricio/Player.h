@@ -14,9 +14,7 @@ public:
 	float getSpeed();
 	void setSpriteSheet(string p_spriteSheet);
 
-	void move();
-	void shoot();
-	void draw();
+	void update();
 
 	Sprite getSprite();
 	int getPosX();
@@ -25,9 +23,22 @@ public:
 	void setIsShoot(bool p_status);
 	bool getIsShoot();
 
+	void setAudioEffect(string p_name);
+
+	void setIsPowerUp(bool p_status);
+	int getPowerUpTime();
+
 protected:
+	Som effectShoot;
 	Sprite sprite;
 	float x, y;
 	float speed;
+	float speedIntro = 1.0f;
 	bool isShoot;
+	bool isPowerUp;
+	int counterPowerUp;
+
+	void move();
+	void shoot();
+	void draw();
 };

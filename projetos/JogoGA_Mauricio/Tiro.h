@@ -7,20 +7,29 @@ public:
 	Tiro();
 	~Tiro();
 
-	void tiroSetPosition(int p_x, int p_y);
-	void tiroSetSpeed(float p_speed);
-	float tiroGetSpeed();
-	void tiroSetSpriteSheet(string p_spriteSheet);
+	void setPosition(int p_x, int p_y);
+	void setSpeed(float p_speed);
+	float getSpeed();
+	float getSpeedIntro();
+	void setSpriteSheet(string p_spriteSheet);
 
-	void tiroMoveShot();
-	void tiroDraw();
-	Sprite tiroGetSprite();
-	int tiroGetPosX();
-	int tiroGetPosY();
+	void moveShot();
+	void draw();
+	Sprite getSprite();
+	int getPosX();
+	int getPosY();	
+
+	void setIsPowerUp(bool p_status);
+	int getPowerUpTime();
 
 private:
 	Sprite sprite;
 	float x, y;
+	float speedIntro;
 	float speed;
+
+protected:
+	bool isPowerUp;
+	int counterPowerUp;
 };
 

@@ -70,7 +70,7 @@ void Asteroid::asteroidStart()
 	setPosition(x, y);
 
 	setSpeed(uniRandEntre(1, 3));
-	int scaleTemp = uniRandEntre(2, 6);
+	int scaleTemp = uniRandEntre(1, 3);
 	setScale(scaleTemp, scaleTemp);
 }
 

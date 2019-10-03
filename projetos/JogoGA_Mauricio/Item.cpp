@@ -28,6 +28,7 @@ void Item::setSpriteSheet(string p_spriteSheet)
 
 void Item::startNewItem(int p_posX, int p_posY, int p_powerUp)
 {
+	sprite.setEscala(0.5f, 0.5f);
 	powerUpType = p_powerUp;
 	powerUpActive();
 	setPosition(p_posX, p_posY);	

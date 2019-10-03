@@ -12,7 +12,7 @@ Jogo::~Jogo()
 
 void Jogo::inicializar()
 {
-	uniInicializar(800, 600, true);
+	uniInicializar(800, 600, false);
 	uniRandSetSemente(time(NULL));
 
 	statusGame = 0;
@@ -107,13 +107,18 @@ void Jogo::finalizar()
 	gRecursos.descarregarSpriteSheet("buttonStart");
 	gRecursos.descarregarSpriteSheet("buttonContinue");
 	gRecursos.descarregarSpriteSheet("buttonGameOver");
+	gRecursos.descarregarSpriteSheet("title");
+	gRecursos.descarregarSpriteSheet("background");
 
 	gRecursos.descarregarAudio("music");
+	gRecursos.descarregarAudio("effectShoot");
 	gRecursos.descarregarAudio("damage");
 	gRecursos.descarregarAudio("damageShip");
 	gRecursos.descarregarAudio("powerUp");
+	gRecursos.descarregarAudio("ButtonEffect");
 
-	gRecursos.descarregarTudo();
+
+	//gRecursos.descarregarTudo();
 	uniFinalizar();
 }
 

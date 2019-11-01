@@ -1,10 +1,10 @@
 ﻿  Jogo.cpp
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(16): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(78): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(82): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(86): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(233): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(250): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(266): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(265): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-  base.vcxproj -> W:\TrabalhoGaED\TrabalhoGA_ED2019\projetos\JogoGA_Mauricio\bin\base-debug.exe
+c:\users\mauricioschere\documents\github\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(17): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
+c:\users\mauricioschere\documents\github\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(79): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+c:\users\mauricioschere\documents\github\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(83): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+c:\users\mauricioschere\documents\github\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(87): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+c:\users\mauricioschere\documents\github\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(234): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+c:\users\mauricioschere\documents\github\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(251): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+c:\users\mauricioschere\documents\github\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(267): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+  base.vcxproj -> C:\Users\mauricioschere\Documents\GitHub\TrabalhoGA_ED2019\projetos\JogoGA_Mauricio\bin\base-debug.exe
+  base.vcxproj -> C:\Users\mauricioschere\Documents\GitHub\TrabalhoGA_ED2019\projetos\JogoGA_Mauricio\bin\base-debug.pdb (Full PDB)

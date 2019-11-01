@@ -8,6 +8,7 @@ Jogo::Jogo()
 
 Jogo::~Jogo()
 {
+	exit(0);
 }
 
 void Jogo::inicializar()
@@ -25,7 +26,7 @@ void Jogo::inicializar()
 	player.Tiro::setSpriteSheet("tiro");
 
 #pragma endregion
-	
+		
 #pragma region SOM
 
 	//tiro do jogador

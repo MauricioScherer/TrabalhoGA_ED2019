@@ -14,6 +14,7 @@ public:
 
 	virtual void powerUpActive();
 
+protected:
 	int powerUpType;
 	float speed;
 };

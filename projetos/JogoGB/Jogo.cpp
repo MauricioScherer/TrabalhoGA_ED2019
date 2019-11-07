@@ -15,13 +15,14 @@ void Jogo::inicializar()
 	pilha.push(&menu);
 	//pilha.push(&jogar); 
 	//pilha.pop();
+
+	player = new Player();
+
+	gameManager.Load();
 }
 
 void Jogo::finalizar()
 {
-	//	O resto da finalização vem aqui (provavelmente, em ordem inversa a inicialização)!
-	//	...
-
 	uniFinalizar();
 }
 
@@ -32,6 +33,10 @@ void Jogo::executar()
 		uniIniciarFrame();
 
 		pilha.top()->desenhar();
+
+		string txt = "";
+		gGraficos.desenharTexto(txt, 25, 25, 255, 255, 255, 255, 0, 0);
+
 				
 		uniTerminarFrame();
 	}

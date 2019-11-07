@@ -3,6 +3,8 @@
 #include "Menu.h"
 #include "TelaJogar.h"
 #include "TelaCreditos.h"
+#include "Player.h"
+#include "GameManager.h"
 
 class Jogo
 {
@@ -15,8 +17,10 @@ public:
 
 	void executar();	
 
-	stack<Tela*> pilha;
+	GameManager gameManager;
+	Player *player;
 
+	stack<Tela*> pilha;
 	Menu menu;
 	TelaJogar jogar;
 	TelaCreditos creditos;

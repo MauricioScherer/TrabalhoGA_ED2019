@@ -1,6 +1,5 @@
 #include "Jogo.h"
 #include <time.h>
-#include <fstream>
 
 Jogo::Jogo()
 {
@@ -15,111 +14,16 @@ void Jogo::inicializar()
 {
 	uniInicializar(800, 600, false);
 	uniRandSetSemente(time(NULL));
-
-	statusGame = 0;
-
-#pragma region PLAYER
-
-	gRecursos.carregarSpriteSheet("player", "assets/sprite/nave2.png", 1, 1);
-	gRecursos.carregarSpriteSheet("tiro", "assets/sprite/tiro2.png", 1, 1);
-	player.setSpriteSheet("player");
-	player.Tiro::setSpriteSheet("tiro");
-
-#pragma endregion
-		
-#pragma region SOM
-
-	//tiro do jogador
-	gRecursos.carregarAudio("effectShoot", "assets/audio/effectShoot.aiff");
-	player.setAudioEffect("effectShoot");
-
-	//musica
-	gRecursos.carregarAudio("music", "assets/audio/music2.wav");
-	music.setAudio("music");
-	music.tocar(true);
-
-	//damage tiro colider
-	gRecursos.carregarAudio("damage", "assets/audio/damage.mp3");
-	damage.setAudio("damage");
-
-	//damage nave colider
-	gRecursos.carregarAudio("damageShip", "assets/audio/naveColider.wav");
-	damageShip.setAudio("damageShip");
-
-	//power up
-	gRecursos.carregarAudio("powerUp", "assets/audio/powerUp.wav");
-	powerUp.setAudio("powerUp");
-
-	//button effect
-	gRecursos.carregarAudio("ButtonEffect", "assets/audio/buttonEffect.wav");
-	buttonEffect.setAudio("ButtonEffect");
-
-#pragma endregion
-	
-#pragma region GERAL
-
-	item = new Item();
-	item->itemInicializar();
-
-	maxCounter = uniRandEntre(100, 500);
-	counterItem = 0;
-
-	gRecursos.carregarSpriteSheet("title", "assets/sprite/title.png", 1, 1);
-	sprTitle.setSpriteSheet("title");
-
-	gRecursos.carregarSpriteSheet("background", "assets/sprite/backGround2.png", 1, 1);
-	background.setSpriteSheet("background");
-
-#pragma endregion
-	
-#pragma region BUTTONS
-
-	gRecursos.carregarSpriteSheet("buttonStart", "assets/sprite/ButtonStart2.png", 3, 1);
-	buttonStart.setSpriteSheet("buttonStart");
-	buttonStart.setPos(gJanela.getLargura() / 2, gJanela.getAltura() / 2 + 100);
-
-	gRecursos.carregarSpriteSheet("buttonContinue", "assets/sprite/ButtonContinuar.png", 3, 1);
-	buttonContinuar.setSpriteSheet("buttonContinue");
-	buttonContinuar.setPos(gJanela.getLargura() / 2, gJanela.getAltura() / 2 + 200);
-
-	gRecursos.carregarSpriteSheet("buttonGameOver", "assets/sprite/ButtonGameOver2.png", 3, 1);
-	buttonGameOver.setSpriteSheet("buttonGameOver");
-	buttonGameOver.setPos(gJanela.getLargura() / 2, gJanela.getAltura() / 2);
-
-#pragma endregion
-	
-#pragma region ENEMY
-
-	gRecursos.carregarSpriteSheet("asteroid", "assets/sprite/asteroid2.png", 1, 1);
-	asteroid[0].setSpriteSheet("asteroid");
-	asteroid[1].setSpriteSheet("asteroid");
-	asteroid[2].setSpriteSheet("asteroid");
-	asteroid[3].setSpriteSheet("asteroid");
-
-#pragma endregion
+	statusGame = 0;		
+	player.start();
+	startVars();
 }
 
 void Jogo::finalizar()
 {
-	save();
-	gRecursos.descarregarSpriteSheet("player");
-	gRecursos.descarregarSpriteSheet("asteroid");
-	gRecursos.descarregarSpriteSheet("tiro");
-	gRecursos.descarregarSpriteSheet("buttonStart");
-	gRecursos.descarregarSpriteSheet("buttonContinue");
-	gRecursos.descarregarSpriteSheet("buttonGameOver");
-	gRecursos.descarregarSpriteSheet("title");
-	gRecursos.descarregarSpriteSheet("background");
-
-	gRecursos.descarregarAudio("music");
-	gRecursos.descarregarAudio("effectShoot");
-	gRecursos.descarregarAudio("damage");
-	gRecursos.descarregarAudio("damageShip");
-	gRecursos.descarregarAudio("powerUp");
-	gRecursos.descarregarAudio("ButtonEffect");
-
-
-	//gRecursos.descarregarTudo();
+	//save();
+	userManager.Save();
+	gRecursos.descarregarTudo();
 	uniFinalizar();
 }
 
@@ -127,9 +31,7 @@ void Jogo::executar()
 {
 	while(!gTeclado.soltou[TECLA_ESC] && !gEventos.sair)
 	{
-		uniIniciarFrame();
-		
-		setColorBackground();
+		uniIniciarFrame();		
 		background.desenhar(gJanela.getLargura() / 2, gJanela.getAltura() / 2);
 		
 		switch (statusGame)
@@ -289,6 +191,66 @@ void Jogo::collisionTest(int p_obj)
 
 #pragma region METODOS_LOCAIS
 
+void Jogo::startVars()
+{
+#pragma region Sounds
+	gRecursos.carregarAudio("music", "assets/audio/music2.wav");
+	music.setAudio("music");
+	music.tocar(true);
+	
+	gRecursos.carregarAudio("damage", "assets/audio/damage.mp3");
+	damage.setAudio("damage");
+
+	gRecursos.carregarAudio("damageShip", "assets/audio/naveColider.wav");
+	damageShip.setAudio("damageShip");
+
+	gRecursos.carregarAudio("powerUp", "assets/audio/powerUp.wav");
+	powerUp.setAudio("powerUp");
+
+	gRecursos.carregarAudio("ButtonEffect", "assets/audio/buttonEffect.wav");
+	buttonEffect.setAudio("ButtonEffect");
+#pragma endregion
+	
+#pragma region Itens
+	item = new Item();
+	item->itemInicializar();
+
+	maxCounter = uniRandEntre(100, 500);
+	counterItem = 0;
+
+	gRecursos.carregarSpriteSheet("title", "assets/sprite/title.png", 1, 1);
+	sprTitle.setSpriteSheet("title");
+	gRecursos.carregarSpriteSheet("background", "assets/sprite/backGround2.png", 1, 1);
+	background.setSpriteSheet("background");
+#pragma endregion
+		
+#pragma region BUTTONS
+
+	gRecursos.carregarSpriteSheet("buttonStart", "assets/sprite/ButtonStart2.png", 3, 1);
+	buttonStart.setSpriteSheet("buttonStart");
+	buttonStart.setPos(gJanela.getLargura() / 2, gJanela.getAltura() / 2 + 100);
+
+	gRecursos.carregarSpriteSheet("buttonContinue", "assets/sprite/ButtonContinuar.png", 3, 1);
+	buttonContinuar.setSpriteSheet("buttonContinue");
+	buttonContinuar.setPos(gJanela.getLargura() / 2, gJanela.getAltura() / 2 + 200);
+
+	gRecursos.carregarSpriteSheet("buttonGameOver", "assets/sprite/ButtonGameOver2.png", 3, 1);
+	buttonGameOver.setSpriteSheet("buttonGameOver");
+	buttonGameOver.setPos(gJanela.getLargura() / 2, gJanela.getAltura() / 2);
+
+#pragma endregion
+
+#pragma region ENEMY
+
+	gRecursos.carregarSpriteSheet("asteroid", "assets/sprite/asteroid2.png", 1, 1);
+	asteroid[0].setSpriteSheet("asteroid");
+	asteroid[1].setSpriteSheet("asteroid");
+	asteroid[2].setSpriteSheet("asteroid");
+	asteroid[3].setSpriteSheet("asteroid");
+
+#pragma endregion
+}
+
 void Jogo::startNewItem()
 {
 	int posX = uniRandEntre(10, gJanela.getLargura() - 10);
@@ -303,20 +265,6 @@ void Jogo::resetItem()
 	counterItem = 0;
 	maxCounter = uniRandEntre(500, 1000);
 	isItemActive = false;
-}
-
-void Jogo::setColorBackground()
-{
-	if (gTeclado.soltou[TECLA_0])
-		gJanela.setCorDeFundo(0, 0, 0);
-	else if (gTeclado.soltou[TECLA_1])
-		gJanela.setCorDeFundo(255, 255, 255);
-	else if (gTeclado.soltou[TECLA_2])
-		gJanela.setCorDeFundo(255, 0, 0);
-	else if (gTeclado.soltou[TECLA_3])
-		gJanela.setCorDeFundo(0, 255, 0);
-	else if (gTeclado.soltou[TECLA_4])
-		gJanela.setCorDeFundo(0, 0, 255);
 }
 
 void Jogo::GameStart(int p_status)
@@ -335,34 +283,34 @@ void Jogo::GameStart(int p_status)
 	asteroid[3].asteroidStart();
 }
 
-void Jogo::save()
-{
-	ofstream archive;
-	archive.open("dados.bin", ios::binary);
+//void Jogo::save()
+//{
+//	ofstream archive;
+//	archive.open("dados.bin", ios::binary);
+//
+//	if (archive.is_open())
+//	{
+//		archive.write(reinterpret_cast<char *>(&points), sizeof(int));
+//	}
+//	archive.close();
+//}
 
-	if (archive.is_open())
-	{
-		archive.write(reinterpret_cast<char *>(&points), sizeof(int));
-	}
-	archive.close();
-}
-
-int Jogo::load()
-{
-	ifstream archive;
-	archive.open("dados.bin", ios::binary);
-
-	int __points;
-
-	if (!archive.is_open())
-	{
-		return 0;
-	}
-	else
-	{
-		archive.read(reinterpret_cast<char *>(&__points), sizeof(int));
-		return __points;
-	}
-}
+//int Jogo::load()
+//{
+//	ifstream archive;
+//	archive.open("dados.bin", ios::binary);
+//
+//	int __points;
+//
+//	if (!archive.is_open())
+//	{
+//		return 0;
+//	}
+//	else
+//	{
+//		archive.read(reinterpret_cast<char *>(&__points), sizeof(int));
+//		return __points;
+//	}
+//}
 
 #pragma endregion

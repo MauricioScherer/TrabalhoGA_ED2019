@@ -8,6 +8,7 @@ public:
 	Player();
 	~Player();
 	
+	void start();
 	void playerInicializar();
 	void setPosition(int p_x, int p_y);
 	void setSpeed(float p_speed);

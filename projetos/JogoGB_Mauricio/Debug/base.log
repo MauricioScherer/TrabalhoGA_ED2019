@@ -1,10 +1,55 @@
-﻿  Jogo.cpp
-c:\users\mauricioschere\documents\github\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(17): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
-c:\users\mauricioschere\documents\github\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(79): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-c:\users\mauricioschere\documents\github\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(83): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-c:\users\mauricioschere\documents\github\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(87): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-c:\users\mauricioschere\documents\github\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(234): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-c:\users\mauricioschere\documents\github\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(251): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-c:\users\mauricioschere\documents\github\trabalhoga_ed2019\projetos\jogoga_mauricio\jogo.cpp(267): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-  base.vcxproj -> C:\Users\mauricioschere\Documents\GitHub\TrabalhoGA_ED2019\projetos\JogoGA_Mauricio\bin\base-debug.exe
-  base.vcxproj -> C:\Users\mauricioschere\Documents\GitHub\TrabalhoGA_ED2019\projetos\JogoGA_Mauricio\bin\base-debug.pdb (Full PDB)
+﻿  UserManager.cpp
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(15): error C2065: 'ofstream': identificador não declarado
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(15): error C2146: erro de sintaxe: ';' ausente antes do identificador 'archive'
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(15): error C2065: 'archive': identificador não declarado
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(16): error C2065: 'archive': identificador não declarado
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(16): error C2228: esquerda de '.open' deve possuir class/struct/union
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(16): note: tipo é 'unknown-type'
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(16): error C2653: 'ios': não é um nome de classe ou de namespace
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(16): error C2065: 'binary': identificador não declarado
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(18): error C2065: 'archive': identificador não declarado
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(18): error C2228: esquerda de '.is_open' deve possuir class/struct/union
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(18): note: tipo é 'unknown-type'
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(20): error C2065: 'archive': identificador não declarado
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(20): error C2228: esquerda de '.write' deve possuir class/struct/union
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(20): note: tipo é 'unknown-type'
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(20): error C2065: 'points': identificador não declarado
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(22): error C2065: 'archive': identificador não declarado
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(22): error C2228: esquerda de '.close' deve possuir class/struct/union
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(22): note: tipo é 'unknown-type'
+  Tiro.cpp
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\tiro.cpp(19): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\tiro.cpp(20): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\tiro.cpp(50): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\tiro.cpp(60): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\tiro.cpp(65): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
+  Player.cpp
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(36): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(37): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(108): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(127): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(137): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(142): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
+  main.cpp
+  Jogo.cpp
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(16): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(135): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(152): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(168): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(167): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(230): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(234): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(238): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+  ItemBase.cpp
+  Item.cpp
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\item.cpp(20): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\item.cpp(21): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\item.cpp(64): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\item.cpp(69): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\item.cpp(74): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+  Asteroid.cpp
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\asteroid.cpp(70): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\asteroid.cpp(72): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\asteroid.cpp(74): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\asteroid.cpp(79): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+  Gerando Código...

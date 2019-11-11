@@ -1,45 +1,94 @@
-﻿  UserManager.cpp
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(15): error C2065: 'ofstream': identificador não declarado
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(15): error C2146: erro de sintaxe: ';' ausente antes do identificador 'archive'
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(15): error C2065: 'archive': identificador não declarado
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(16): error C2065: 'archive': identificador não declarado
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(16): error C2228: esquerda de '.open' deve possuir class/struct/union
-  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(16): note: tipo é 'unknown-type'
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(16): error C2653: 'ios': não é um nome de classe ou de namespace
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(16): error C2065: 'binary': identificador não declarado
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(18): error C2065: 'archive': identificador não declarado
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(18): error C2228: esquerda de '.is_open' deve possuir class/struct/union
-  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(18): note: tipo é 'unknown-type'
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(20): error C2065: 'archive': identificador não declarado
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(20): error C2228: esquerda de '.write' deve possuir class/struct/union
-  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(20): note: tipo é 'unknown-type'
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(20): error C2065: 'points': identificador não declarado
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(22): error C2065: 'archive': identificador não declarado
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(22): error C2228: esquerda de '.close' deve possuir class/struct/union
-  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\usermanager.cpp(22): note: tipo é 'unknown-type'
-  Tiro.cpp
+﻿  Tiro.cpp
 w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\tiro.cpp(19): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
 w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\tiro.cpp(20): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
 w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\tiro.cpp(50): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
 w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\tiro.cpp(60): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
 w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\tiro.cpp(65): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
+  Tela.cpp
   Player.cpp
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(36): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(37): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(108): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(127): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(137): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(142): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(25): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(26): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(97): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(116): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(126): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(131): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
+  Menu.cpp
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\menu.cpp(26): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\lista.h(76): error C2039: 'anterior': não é um membro de 'No<T>'
+          with
+          [
+              T=Tela
+          ]
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\lista.h(18): note: consulte a declaração de 'No<T>'
+          with
+          [
+              T=Tela
+          ]
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\lista.h(66): note: ao compilar a função membro '<Desconhecido>' de classe <Desconhecido>
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\menu.cpp(60): note: consulte a referência à instanciação da função modelo 'void Lista<Tela>::insereFimLista(T *)' que está sendo compilada
+          with
+          [
+              T=Tela
+          ]
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\menu.h(21): note: consulte a referência à instanciação '<Desconhecido>' de classe <Desconhecido> que está sendo compilada
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\lista.h(76): error C2039: 'anterior': não é um membro de 'No<T>'
+          with
+          [
+              T=BotaoSprite
+          ]
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\lista.h(18): note: consulte a declaração de 'No<T>'
+          with
+          [
+              T=BotaoSprite
+          ]
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\lista.h(66): note: ao compilar a função membro '<Desconhecido>' de classe <Desconhecido>
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\menu.cpp(30): note: consulte a referência à instanciação da função modelo 'void Lista<BotaoSprite>::insereFimLista(T *)' que está sendo compilada
+          with
+          [
+              T=BotaoSprite
+          ]
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\menu.h(22): note: consulte a referência à instanciação '<Desconhecido>' de classe <Desconhecido> que está sendo compilada
   main.cpp
   Jogo.cpp
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(16): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(135): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(152): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(168): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(167): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(230): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(234): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(238): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(17): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(96): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(100): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(104): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(258): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(275): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(291): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(290): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\lista.h(76): error C2039: 'anterior': não é um membro de 'No<T>'
+          with
+          [
+              T=Tela
+          ]
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\lista.h(18): note: consulte a declaração de 'No<T>'
+          with
+          [
+              T=Tela
+          ]
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\lista.h(66): note: ao compilar a função membro '<Desconhecido>' de classe <Desconhecido>
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\pilha.h(17): note: consulte a referência à instanciação da função modelo 'void Lista<Tela>::insereFimLista(T *)' que está sendo compilada
+          with
+          [
+              T=Tela
+          ]
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\lista.h(33): note: ao compilar a função membro '<Desconhecido>' de classe <Desconhecido>
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\pilha.h(7): note: consulte a referência à instanciação da função modelo 'Lista<Tela>::Lista(void)' que está sendo compilada
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\menu.h(21): note: consulte a referência à instanciação '<Desconhecido>' de classe <Desconhecido> que está sendo compilada
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\lista.h(224): error C2039: 'anterior': não é um membro de 'No<T>'
+          with
+          [
+              T=Tela
+          ]
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\lista.h(18): note: consulte a declaração de 'No<T>'
+          with
+          [
+              T=Tela
+          ]
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\lista.h(212): note: ao compilar a função membro '<Desconhecido>' de classe <Desconhecido>
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\pilha.h(22): note: consulte a referência à instanciação da função modelo 'Tela *Lista<Tela>::removeUltimoNo(void)' que está sendo compilada
   ItemBase.cpp
   Item.cpp
 w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb_mauricio\item.cpp(20): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados

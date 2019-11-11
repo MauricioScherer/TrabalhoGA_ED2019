@@ -1,0 +1,10 @@
+﻿  Player.cpp
+  Jogo.cpp
+w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb\jogo.cpp(21): error C2248: 'GameManager::Load': não é possível acessar private membro declarado na classe 'GameManager'
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb\gamemanager.h(20): note: consulte a declaração de 'GameManager::Load'
+  w:\trabalhogaed\trabalhoga_ed2019\projetos\jogogb\gamemanager.h(8): note: consulte a declaração de 'GameManager'
+  GameManager.cpp
+  Gerando Código...
+  Compilando...
+  main.cpp
+  Gerando Código...

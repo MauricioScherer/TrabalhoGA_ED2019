@@ -18,23 +18,6 @@ void Jogo::inicializar()
 
 	statusGame = 0;
 
-#pragma region TEMP
-	Menu * menu_princ = new Menu("Menu_Principal");
-	Menu * menu_sec = new Menu("Menu_Secundario");
-	Menu * menu_terc = new Menu("Menu_Terciario");
-	Tela * jogo = new Tela("jogo");
-	menu_princ->adicionaTela(menu_sec);
-	menu_princ->adicionaTela(jogo);
-	menu_sec->adicionaTela(menu_terc);
-	telas->empilhar(menu_princ);
-	menu_princ->inicializar();
-	menu_sec->inicializar();
-	menu_terc->inicializar();
-	jogo->inicializar();
-#pragma endregion
-
-
-
 #pragma region PLAYER
 
 	gRecursos.carregarSpriteSheet("player", "assets/sprite/nave2.png", 1, 1);
@@ -119,134 +102,108 @@ void Jogo::inicializar()
 void Jogo::finalizar()
 {
 	save();
-
 	gRecursos.descarregarTudo();
 	uniFinalizar();
 }
 
-//void Jogo::executar()
-//{
-//	while(!gTeclado.soltou[TECLA_ESC] && !gEventos.sair)
-//	{
-//		uniIniciarFrame();
-//		
-//		setColorBackground();
-//		background.desenhar(gJanela.getLargura() / 2, gJanela.getAltura() / 2);
-//		
-//		switch (statusGame)
-//		{
-//		case 0:
-//#pragma region Case0
-//
-//			sprTitle.desenhar(gJanela.getLargura() / 2, gJanela.getAltura() / 2 - 150);
-//			buttonStart.atualizar();
-//			buttonStart.desenhar();
-//			buttonContinuar.atualizar();
-//			buttonContinuar.desenhar();
-//			
-//			if (buttonStart.estaClicado())
-//			{
-//				buttonEffect.tocar();
-//				GameStart(0);
-//			}
-//			else if (buttonContinuar.estaClicado())
-//			{
-//				buttonEffect.tocar();
-//				GameStart(1);
-//			}
-//#pragma endregion
-//
-//			break;
-//		case 1:
-//#pragma region Case1
-//			player.update();
-//
-//			for (int i = 0; i < 4; i++)
-//			{
-//				asteroid[i].update();
-//				asteroid[i].draw();
-//				collisionTest(i);
-//			}
-//
-//			if (!isItemActive)
-//				counterItem += 1;
-//			else
-//				item->draw();
-//
-//			if (counterItem >= maxCounter && !isItemActive)
-//			{
-//				startNewItem();
-//				isItemActive = true;
-//			}
-//#pragma endregion
-//
-//			break;
-//		case 2:
-//#pragma region Case2
-//			buttonGameOver.atualizar();
-//			buttonGameOver.desenhar();
-//
-//			if (buttonGameOver.estaClicado())
-//			{
-//				statusGame = 0;
-//			}
-//#pragma endregion
-//
-//			break;
-//		default:
-//			break;
-//		}
-//
-//#pragma region DebugTela
-//
-//		if (gTeclado.soltou[TECLA_D])
-//			debug = !debug;
-//
-//		if (statusGame == 1)
-//		{
-//			if (debug)
-//			{
-//				string txt = "pos X: " + to_string(player.getPosX()) + "\n" +
-//					"pos Y: " + to_string(player.getPosY()) + "\n" +
-//					"pode atirar: " + to_string(player.getIsShoot()) + "\n" +
-//					"counterMax: " + to_string(maxCounter) + "\n" +
-//					"counter: " + to_string(counterItem) + "\n" +
-//					"tempo de powerUp nave: " + to_string(player.getPowerUpTime()) + "\n" + 
-//					"tempo de powerUp Tiro: " + to_string(player.Tiro::getPowerUpTime());
-//
-//				gGraficos.desenharTexto(txt, 25, 25, 255, 255, 255, 255, 0, 0);
-//			}
-//
-//			string pointsStr = "PONTOS: " + to_string(points);
-//			gGraficos.desenharTexto(pointsStr, gJanela.getLargura() / 2, 25, 255, 255, 255, 255, 0.5f, 0.5f);
-//		}
-//
-//#pragma endregion
-//
-//	uniTerminarFrame();
-//	}
-//}
-
-
 void Jogo::executar()
 {
-	while (!gTeclado.soltou[TECLA_ESC] && !gEventos.sair)
+	while(!gTeclado.soltou[TECLA_ESC] && !gEventos.sair)
 	{
-		uniIniciarFrame();
+		uniIniciarFrame();		
+		background.desenhar(gJanela.getLargura() / 2, gJanela.getAltura() / 2);
+		
+		switch (statusGame)
+		{
+		case 0:
+#pragma region Case0
 
-		//	Seu código vem aqui!
-		//	...
-		telas->topo()->desenhar();
-		telas->topo()->atualizar();
-		if (telas->topo()->obtemProximaTela() != nullptr) {
-			if ((telas->topo())->obtemProximaTela()->obtemTitulo() == "voltar") {
-				telas->desempilhar();
+			sprTitle.desenhar(gJanela.getLargura() / 2, gJanela.getAltura() / 2 - 150);
+			buttonStart.atualizar();
+			buttonStart.desenhar();
+			buttonContinuar.atualizar();
+			buttonContinuar.desenhar();
+			
+			if (buttonStart.estaClicado())
+			{
+				buttonEffect.tocar();
+				GameStart(0);
 			}
-			else {
-				telas->empilhar(telas->topo()->obtemProximaTela());
+			else if (buttonContinuar.estaClicado())
+			{
+				buttonEffect.tocar();
+				GameStart(1);
 			}
+#pragma endregion
+
+			break;
+		case 1:
+#pragma region Case1
+			player.update();
+
+			for (int i = 0; i < 4; i++)
+			{
+				asteroid[i].update();
+				asteroid[i].draw();
+				collisionTest(i);
+			}
+
+			if (!isItemActive)
+				counterItem += 1;
+			else
+				item->draw();
+
+			if (counterItem >= maxCounter && !isItemActive)
+			{
+				startNewItem();
+				isItemActive = true;
+			}
+#pragma endregion
+
+			break;
+		case 2:
+#pragma region Case2
+			buttonGameOver.atualizar();
+			buttonGameOver.desenhar();
+
+			if (buttonGameOver.estaClicado())
+			{
+				statusGame = 0;
+			}
+#pragma endregion
+
+			break;
+		default:
+			break;
 		}
-		uniTerminarFrame();
+
+#pragma region DebugTela
+
+		if (gTeclado.soltou[TECLA_D])
+			debug = !debug;
+
+		if (statusGame == 1)
+		{
+			if (debug)
+			{
+				string txt = "pos X: " + to_string(player.getPosX()) + "\n" +
+					"pos Y: " + to_string(player.getPosY()) + "\n" +
+					"pode atirar: " + to_string(player.getIsShoot()) + "\n" +
+					"counterMax: " + to_string(maxCounter) + "\n" +
+					"counter: " + to_string(counterItem) + "\n" +
+					"tempo de powerUp nave: " + to_string(player.getPowerUpTime()) + "\n" + 
+					"tempo de powerUp Tiro: " + to_string(player.Tiro::getPowerUpTime());
+
+				gGraficos.desenharTexto(txt, 25, 25, 255, 255, 255, 255, 0, 0);
+			}
+
+			string pointsStr = "PONTOS: " + to_string(points);
+			gGraficos.desenharTexto(pointsStr, gJanela.getLargura() / 2, 25, 255, 255, 255, 255, 0.5f, 0.5f);
+		}
+
+#pragma endregion
+
+	uniTerminarFrame();
 	}
 }
 
@@ -327,20 +284,6 @@ void Jogo::resetItem()
 	counterItem = 0;
 	maxCounter = uniRandEntre(500, 1000);
 	isItemActive = false;
-}
-
-void Jogo::setColorBackground()
-{
-	if (gTeclado.soltou[TECLA_0])
-		gJanela.setCorDeFundo(0, 0, 0);
-	else if (gTeclado.soltou[TECLA_1])
-		gJanela.setCorDeFundo(255, 255, 255);
-	else if (gTeclado.soltou[TECLA_2])
-		gJanela.setCorDeFundo(255, 0, 0);
-	else if (gTeclado.soltou[TECLA_3])
-		gJanela.setCorDeFundo(0, 255, 0);
-	else if (gTeclado.soltou[TECLA_4])
-		gJanela.setCorDeFundo(0, 0, 255);
 }
 
 void Jogo::GameStart(int p_status)

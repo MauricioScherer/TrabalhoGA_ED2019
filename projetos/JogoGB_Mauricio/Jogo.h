@@ -2,10 +2,7 @@
 #include "Player.h"
 #include "Asteroid.h"
 #include "Item.h"
-
-#include "Pilha.h"
-#include "Tela.h"
-#include "Menu.h"
+#include "ListaUsuarios.h"
 
 class Jogo
 {
@@ -18,7 +15,6 @@ public:
 	void executar();
 	
 private:
-	Pilha<Tela> *telas = new Pilha<Tela>();
 	int counterItem;
 	int maxCounter;
 	int points;
@@ -28,7 +24,6 @@ private:
 
 	void startNewItem();
 	void resetItem();
-	void setColorBackground();
 	void GameStart(int p_status);
 	void collisionTest(int p_obj);
 	void save();
@@ -37,6 +32,7 @@ private:
 	Player player;
 	Asteroid asteroid[4];
 	Item *item;
+	ListaUsuarios *listaUsuarios;
 
 	Som music, damage, damageShip, powerUp, buttonEffect;
 	Sprite sprTitle;

@@ -7,6 +7,7 @@ class Usuario
 {
 public:
 	Usuario();
+	Usuario(string p_name, string p_password);
 	~Usuario();
 	void setName(string p_name);
 	string getName();

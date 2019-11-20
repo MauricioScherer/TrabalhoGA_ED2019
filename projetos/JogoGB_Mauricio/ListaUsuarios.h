@@ -1,8 +1,9 @@
 #pragma once
 #include <fstream>
 #include "NoUsuarios.h"
+#include "Arquivos.h"
 
-class ListaUsuarios
+class ListaUsuarios : public Arquivos
 {
 public:
 	ListaUsuarios();

@@ -4,6 +4,13 @@ Usuario::Usuario()
 {
 }
 
+Usuario::Usuario(string p_name, string p_password)
+{
+	name = p_name;
+	password = p_password;
+	points = 0;
+}
+
 
 Usuario::~Usuario()
 {

@@ -85,31 +85,30 @@ Usuario* ListaUsuarios::obtemElemento(Usuario * p_usuario)
 void ListaUsuarios::saveUsuarios()
 {	
 	NoUsuarios* c = cabeca;
-	Usuario *_user[5];
 
-	int tam = 0;
+	OpenArquivo("usuarios.bin");
 
-	if (cabeca != NULL)
+	if (arquivoIsOpen())
 	{
-		while (tam < 5 && c)
+		if (cabeca != NULL)
 		{
-			_user[tam] = c->obterInfo();
-			c = c->obterProx();
-			tam++;
+			while (c)
+			{
+				save(c->obterInfo());
+				c = c->obterProx();
+			}
 		}
 	}
 
-	ofstream archive;
-	archive.open("usuarios.bin", ios::binary);
-
-	if (archive.is_open())
-	{
-		archive.write(reinterpret_cast<char *>(&_user), sizeof(Usuario));
-	}
-	archive.close();
+	CloseArquivo();
 }
 
 void ListaUsuarios::loadUsuarios()
 {
+	OpenArquivo("usuarios.bin");
 
+	if (arquivoIsOpen())
+	{
+
+	}
 }

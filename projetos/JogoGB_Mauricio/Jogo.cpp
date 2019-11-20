@@ -18,6 +18,40 @@ void Jogo::inicializar()
 
 	statusGame = 0;
 
+	//inicializando uma lista
+	listaUsuarios = new ListaUsuarios();
+	listaUsuarios->loadUsuarios();
+
+	//input logar 
+	//nome
+	//senha
+	_usuarioTemp = new Usuario("Nome", "Senha");
+
+	//apos ser adicionado os dados no login faz a verificação se o usuario existe e pode logar
+	if (listaUsuarios->existe(_usuarioTemp))
+	{
+		//login e senha estão OK, carrega nova tela
+	}
+	else
+	{
+		//não pode acessar login e/ou senha errados
+	}
+
+	//input cadastrar novo usuario
+	//nome
+	//senha
+	_usuarioTemp = new Usuario("Nome", "Senha");
+
+	//adiciona novo usuario
+	if (!listaUsuarios->existe(_usuarioTemp))
+	{
+		listaUsuarios->inserirFinal(_usuarioTemp);
+	}
+	else
+	{
+		//usuario já cadastrado, escolher um novo nome
+	}	
+
 #pragma region PLAYER
 
 	gRecursos.carregarSpriteSheet("player", "assets/sprite/nave2.png", 1, 1);
@@ -116,62 +150,107 @@ void Jogo::executar()
 		switch (statusGame)
 		{
 		case 0:
-#pragma region Case0
+			//sprTitle.desenhar(gJanela.getLargura() / 2, gJanela.getAltura() / 2 - 150);
+			//buttonStart.atualizar();
+			//buttonStart.desenhar();
+			//buttonContinuar.atualizar();
+			//buttonContinuar.desenhar();
 
-			sprTitle.desenhar(gJanela.getLargura() / 2, gJanela.getAltura() / 2 - 150);
-			buttonStart.atualizar();
-			buttonStart.desenhar();
-			buttonContinuar.atualizar();
-			buttonContinuar.desenhar();
-			
-			if (buttonStart.estaClicado())
-			{
-				buttonEffect.tocar();
-				GameStart(0);
-			}
-			else if (buttonContinuar.estaClicado())
-			{
-				buttonEffect.tocar();
-				GameStart(1);
-			}
-#pragma endregion
+			//if (buttonStart.estaClicado())
+			//{
+			//	buttonEffect.tocar();
+			//	GameStart(0);
+			//}
+			//else if (buttonContinuar.estaClicado())
+			//{
+			//	buttonEffect.tocar();
+			//	GameStart(1);
+			//}
 
+			//INICIO NOVO
+			//tela inicial vai ter os comandos 
+			//botao-> Logar
+				//Nova Tela-> chama a tela de login case 1
+			//botao -> Cadastrar
+				//Nova Tela-> chama a tela de cadastro case 2
 			break;
 		case 1:
-#pragma region Case1
-			player.update();
+			//player.update();
 
-			for (int i = 0; i < 4; i++)
-			{
-				asteroid[i].update();
-				asteroid[i].draw();
-				collisionTest(i);
-			}
+			//for (int i = 0; i < 4; i++)
+			//{
+			//	asteroid[i].update();
+			//	asteroid[i].draw();
+			//	collisionTest(i);
+			//}
 
-			if (!isItemActive)
-				counterItem += 1;
-			else
-				item->draw();
+			//if (!isItemActive)
+			//	counterItem += 1;
+			//else
+			//	item->draw();
 
-			if (counterItem >= maxCounter && !isItemActive)
-			{
-				startNewItem();
-				isItemActive = true;
-			}
-#pragma endregion
+			//if (counterItem >= maxCounter && !isItemActive)
+			//{
+			//	startNewItem();
+			//	isItemActive = true;
+			//}
 
+			//INICIO NOVO
+			//tela de login
+			//Img text login
+				//Input login
+			//Img text senha
+				//input senha
+
+			//botao confirmar
+				//Nova tela-> chama a tela de menu case 3
+			//botao voltar
+				//Nova Tela-> chama a tela inicial case 0
 			break;
 		case 2:
-#pragma region Case2
-			buttonGameOver.atualizar();
-			buttonGameOver.desenhar();
+			//buttonGameOver.atualizar();
+			//buttonGameOver.desenhar();
 
-			if (buttonGameOver.estaClicado())
-			{
-				statusGame = 0;
-			}
-#pragma endregion
+			//if (buttonGameOver.estaClicado())
+			//{
+			//	statusGame = 0;
+			//}
 
+			//INICIO NOVO
+			//tela de cadastro
+
+			//Img text login
+				//Input login
+			//Img text senha
+				//input senha
+
+			//botao confirmar
+				//se usuario nao existir
+					//Nova tela-> chama a tela de menu case 3
+			//botao voltar
+				//Nova Tela-> chama a tela inicial case 0
+			break;
+		case 3:
+			//MENU PRINCIPAL
+			//img titulo
+			//botao-> Novo jogo
+				//carrega o jogo CASE 4
+			//botao-> carregar
+				//carrega o jogo com os dados salvos CASE 4
+			//botao-> ranking
+				//carrega a tela de ranking com os dados dos 5 primeiros melhores pontuados CASE 5
+			//botao-> creditos
+				// carrega tela creditos CASE 6
+			//botao-> sair
+			break;
+		case 4:
+			//tela jogo
+			break;
+		case 5:
+			//tela ranking
+			break;
+		case 6:
+			//tela creditos
 			break;
 		default:
 			break;

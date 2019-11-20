@@ -32,6 +32,7 @@ private:
 	Player player;
 	Asteroid asteroid[4];
 	Item *item;
+	Usuario *_usuarioTemp;
 	ListaUsuarios *listaUsuarios;
 
 	Som music, damage, damageShip, powerUp, buttonEffect;

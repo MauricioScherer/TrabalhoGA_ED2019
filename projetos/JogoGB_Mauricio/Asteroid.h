@@ -8,6 +8,7 @@ public:
 	Asteroid(float p_speed);
 	~Asteroid();
 
+	void inicializar();
 	void setSpriteSheet(string p_sheet);
 	void setPosition(float p_x, float p_y);
 	void setScale(float p_x, float p_y);

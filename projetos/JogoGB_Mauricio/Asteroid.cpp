@@ -17,6 +17,11 @@ Asteroid::~Asteroid()
 {
 }
 
+void Asteroid::inicializar()
+{
+	gRecursos.carregarSpriteSheet("asteroid", "assets/sprite/asteroid2.png", 1, 1);
+}
+
 void Asteroid::setSpriteSheet(string p_sheet)
 {
 	sprite.setSpriteSheet(p_sheet);

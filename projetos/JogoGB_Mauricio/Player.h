@@ -1,6 +1,7 @@
 #pragma once
 #include "libUnicornio.h"
 #include "Tiro.h"
+#include "PlayerStatus.h"
 
 class Player : public Tiro
 {
@@ -8,6 +9,9 @@ public:
 	Player();
 	~Player();
 	
+	void inicializar();
+	void finalizar();
+
 	void playerInicializar();
 	void setPosition(int p_x, int p_y);
 	void setSpeed(float p_speed);
@@ -27,6 +31,8 @@ public:
 
 	void setIsPowerUp(bool p_status);
 	int getPowerUpTime();
+
+	PlayerStatus *playerStatus;
 
 protected:
 	Som effectShoot;

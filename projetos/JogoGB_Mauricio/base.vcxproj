@@ -99,29 +99,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Arquivos.cpp" />
     <ClCompile Include="Asteroid.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="ItemBase.cpp" />
     <ClCompile Include="Jogo.cpp" />
-    <ClCompile Include="ListaUsuarios.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="NoUsuarios.cpp" />
+    <ClCompile Include="Pilha.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerStatus.cpp" />
+    <ClCompile Include="Save.cpp" />
+    <ClCompile Include="Tela.cpp" />
     <ClCompile Include="Tiro.cpp" />
-    <ClCompile Include="Usuario.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Arquivos.h" />
     <ClInclude Include="Asteroid.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="ItemBase.h" />
     <ClInclude Include="Jogo.h" />
-    <ClInclude Include="ListaUsuarios.h" />
-    <ClInclude Include="NoUsuarios.h" />
+    <ClInclude Include="Pilha.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerStatus.h" />
+    <ClInclude Include="Save.h" />
+    <ClInclude Include="Tela.h" />
     <ClInclude Include="Tiro.h" />
-    <ClInclude Include="Usuario.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

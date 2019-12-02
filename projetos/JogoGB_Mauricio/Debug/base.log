@@ -1,43 +1,19 @@
-﻿  Usuario.cpp
-  Tiro.cpp
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tiro.cpp(19): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tiro.cpp(20): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tiro.cpp(50): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tiro.cpp(60): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tiro.cpp(65): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
-  Player.cpp
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(25): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(26): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(97): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(116): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(126): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\player.cpp(131): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
-  NoUsuarios.cpp
-  main.cpp
-  ListaUsuarios.cpp
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\listausuarios.cpp(98): error C2297: '+=': inválido, operando direito possui tipo 'Usuario *'
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\listausuarios.cpp(98): error C2114: '+=': ponteira à esquerda; precisa de valor integral à direita
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\listausuarios.cpp(108): error C2065: 'p_usuarios': identificador não declarado
-  Jogo.cpp
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(17): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(79): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(83): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(87): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(215): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(232): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(248): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\jogo.cpp(247): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-  ItemBase.cpp
-  Item.cpp
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\item.cpp(20): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\item.cpp(21): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\item.cpp(64): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\item.cpp(69): warning C4244: 'return': conversão de 'float' para 'int', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\item.cpp(74): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-  Asteroid.cpp
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\asteroid.cpp(70): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\asteroid.cpp(72): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\asteroid.cpp(74): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\asteroid.cpp(79): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
-  Arquivos.cpp
-  Gerando Código...
+﻿  Tela.cpp
+e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tela.cpp(38): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tela.cpp(42): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tela.cpp(46): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tela.cpp(59): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tela.cpp(63): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tela.cpp(69): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tela.cpp(73): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tela.cpp(77): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tela.cpp(81): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tela.cpp(366): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tela.cpp(384): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tela.cpp(402): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tela.cpp(401): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tela.cpp(453): warning C4018: '<': incompatibilidade de signed/unsigned
+e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tela.cpp(527): warning C4244: '+=': conversão de 'float' para 'Sint16', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tela.cpp(530): warning C4244: '+=': conversão de 'float' para 'Sint16', possível perda de dados
+e:\git\trabalhoga_ed2019\projetos\jogogb_mauricio\tela.cpp(541): warning C4244: '+=': conversão de 'float' para 'int', possível perda de dados
+  base.vcxproj -> E:\GIT\TrabalhoGA_ED2019\projetos\JogoGB_Mauricio\bin\base-debug.exe

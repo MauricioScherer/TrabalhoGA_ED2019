@@ -11,6 +11,22 @@ Player::~Player()
 {
 }
 
+void Player::inicializar()
+{
+	gRecursos.carregarSpriteSheet("player", "assets/sprite/nave2.png", 1, 1);
+	gRecursos.carregarSpriteSheet("tiro", "assets/sprite/tiro2.png", 1, 1);
+	setSpriteSheet("player");
+	Tiro::setSpriteSheet("tiro");
+
+	gRecursos.carregarAudio("effectShoot", "assets/audio/effectShoot.aiff");
+	setAudioEffect("effectShoot");
+}
+
+void Player::finalizar()
+{
+	gRecursos.descarregarTudo();
+}
+
 void Player::playerInicializar()
 {
 	setPosition(gJanela.getLargura() / 2, gJanela.getAltura() - 30);
